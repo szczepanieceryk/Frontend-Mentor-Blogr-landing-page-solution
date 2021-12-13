@@ -1,0 +1,43 @@
+@import '../../custom';
+
+.main-wrapper{
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    img{
+        width: 100%;
+    }
+    .design,.open-source{
+        padding: 0 20px;
+        .title{
+            margin-bottom: 30px;
+        }
+        .content{
+            margin-bottom:40px;
+        }
+    }
+    .state{
+        margin: 300px auto 80px;
+        padding: 180px 20px 100px;
+        position: relative;
+        background-image: url(../../assets/images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 0 100px 0 80px;
+        background-color: $state-sect-bgc;
+        .phones-img{
+            position: absolute;
+            top: -240px;
+            left: 0;
+        }
+        .title{
+            margin: 20px auto 15px;
+        }
+        .title,.text{
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import '../../custom';
+
+.nav-header-wrapper{
+    padding: 30px 20px;
+    position: relative;
+    background: linear-gradient($very-light-red,$light-red);
+    border-radius: 0 0 0 70px;
+    // background-image: url(../../assets/images/bg-pattern-intro-mobile.svg);
+    // background-image: url(../../assets/images/bg-pattern-circles.svg);
+    .hamburger-icon,.close-icon{
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .navigation{
+        // display: none;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        background-color: #fff;
+        ul{
+            li{
+                a{
+                    color: $state-sect-bgc;
+                }
+            }
+            .btn.start.nav{
+                color: #fff;
+                background: linear-gradient($very-light-red,$light-red);
+            }
+        }
+       
+    }
+    .login {
+        display: block;
+        margin: 0 auto;
+        color: $state-sect-bgc;
+    }
+    .header{
+        margin: 50px auto;
+        text-align: center;
+        .content{
+            inset: 0;
+            margin: auto;
+            color: #fff;
+            .title{
+                padding: 0 80px;
+                color: #fff;
+            }
+            .text{
+                margin-top: 10px;
+                display: block;
+                color: hsl(240, 2%, 79%);
+            }
+            .btn{
+                margin: 40px 10px;
+            }
+            .btn.lern{
+                border: 1px solid #ddd;
+                color: #fff;
+                transition: .5s;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: $light-red;
+                }
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,36 @@
+@import '../../custom';
+
+.footer-wrapper{
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 80px 0 0;
+    color: #fff;
+    background-color: $footer-bgc;
+    .title{
+        margin: 40px 0 20px;
+        flex-basis: 100%;
+    }
+    .navigation{
+        ul{
+            li{
+                a{
+                    transition: .5s;
+                    &:hover{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+    .attribution { 
+        margin: 30px auto 0;
+        flex-basis: 100%;
+        font-size: 11px; 
+        a{
+            color: hsl(228, 45%, 44%);
+        }
+     }
+}

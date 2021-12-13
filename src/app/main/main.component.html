@@ -1,0 +1,36 @@
+<div class="main-wrapper">
+  <section class="design">
+    <h3 class="title">
+      {{mainTitle}}
+    </h3>
+    <img class="editor-img" src="../../assets/images/illustration-editor-mobile.svg" alt="">
+    <div *ngFor="let content of designSectionContent" class="content">
+      <h3 class="title">
+        {{content.title}}
+      </h3>
+      <p class="text">
+        {{content.text}}
+      </p>
+    </div>
+  </section>
+  <section class="state">
+    <img class="phones-img" src="../../assets/images/illustration-phones.svg" alt="phones">
+    <h2 class="title">
+      {{stateTitle}}
+    </h2>
+    <p class="text">
+      {{stateText}}
+    </p>
+  </section>
+  <section class="open-source">
+    <img class="laptop-img" src="../../assets/images/illustration-laptop-mobile.svg" alt="laptop">
+    <div *ngFor="let content of openSectionContent" class="content">
+      <h3 class="title">
+        {{content.title}}
+      </h3>
+      <p class="text">
+        {{content.text}}
+      </p>
+    </div>
+  </section>
+</div>

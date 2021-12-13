@@ -1,0 +1,53 @@
+@import './custom';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $body-font;
+    font-size: $font-size;
+}
+
+// global styles for headings and paragraphs 
+h2,h3{
+    color: $headings-col;
+}
+p{
+    line-height: 1.5;
+    color: $text-color;
+}
+
+// global styles for buttons
+.btn{
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+    transition: .5s;
+    color: $light-red;
+}
+.btn.start{
+    background-color: #fff;
+    &:hover{
+        cursor: pointer;
+        background-color: $btn-hover;
+        color: #fff;
+    }
+}
+
+// blobal styles for top and footer navigation
+.navigation{
+    ul{
+        li{
+            margin: 10px 0;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $footer-txt;
+            }
+        }
+    }
+}
