@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-header.component.scss']
 })
 export class NavHeaderComponent implements OnInit {
+
+  // active flag for menuActive function (mobile menu)
   isActive = false;
-  dropdownIsActive = false;
   // content for header 
   title:string = 'A modern publishing platform';
   text:string = 'Grow your audience and build your online brand';
@@ -19,13 +20,5 @@ export class NavHeaderComponent implements OnInit {
 
   menuActive(){
     this.isActive = !this.isActive
-  }
-
-  dropdownActive(){
-
-    this.dropdownIsActive = !this.dropdownIsActive;
-
-    console.log('działa')
-
   }
 }
