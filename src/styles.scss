@@ -12,10 +12,10 @@ body{
 }
 
 // global styles for headings and paragraphs 
-h2,h3{
+.title,.main-title{
     color: $headings-col;
 }
-p{
+.text{
     line-height: 1.5;
     color: $text-color;
 }
@@ -50,4 +50,12 @@ p{
             }
         }
     }
+}
+
+// global classes for grid span control
+.grid-span-col-4{
+    grid-column: span 4;
+}
+.grid-span-row-2{
+    grid-row: span 2;
 }

@@ -3,10 +3,10 @@
 .nav-header-wrapper{
     padding: 30px 20px;
     position: relative;
-    background: linear-gradient($very-light-red,$light-red);
+    background-image: url(../../assets/images/bg-pattern-intro-mobile.svg);
+    background-position: center;
+    background-color: $light-red;
     border-radius: 0 0 0 70px;
-    // background-image: url(../../assets/images/bg-pattern-intro-mobile.svg);
-    // background-image: url(../../assets/images/bg-pattern-circles.svg);
     .hamburger-icon,.close-icon{
         position: absolute;
         top: 40px;
@@ -15,30 +15,66 @@
             cursor: pointer;
         }
     }
+    .close-icon{
+        display: none;
+    }
+    .close-icon.active{
+        display: block;
+    }
+    .hamburger-icon.active{
+        display: none;
+    }
     .navigation{
-        // display: none;
         padding: 20px;
         border-radius: 8px;
         text-align: center;
+        display: none;
         background-color: #fff;
         ul{
             li{
                 a{
                     color: $state-sect-bgc;
                 }
+                .dropdown-menu{
+                    display: none;
+                    margin: 0 auto;
+                    padding: 20px;
+                    width: 90%;
+                    border-radius: 6px;
+                    background-color: rgb(235, 235, 235);
+                }
+                .dropdown-menu.active{
+                    display: block;
+                }
             }
-            .btn.start.nav{
-                color: #fff;
-                background: linear-gradient($very-light-red,$light-red);
+           
+            .arrow-down{
+                margin-left: 5px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
+            hr{
+                color: rgba(243, 241, 241,.5);
+            }
+            .nav-btn{
+                .btn.start.nav{
+                    color: #fff;
+                    background: linear-gradient($very-light-red,$light-red);
+                }
+                .login {
+                    display: block;
+                    margin: 0 auto;
+                    color: $state-sect-bgc;
+                }
+            }
+           
         }
-       
     }
-    .login {
+    .navigation.active{
         display: block;
-        margin: 0 auto;
-        color: $state-sect-bgc;
     }
+    
     .header{
         margin: 50px auto;
         text-align: center;
@@ -53,7 +89,7 @@
             .text{
                 margin-top: 10px;
                 display: block;
-                color: hsl(240, 2%, 79%);
+                color: $footer-txt;
             }
             .btn{
                 margin: 40px 10px;
@@ -62,13 +98,77 @@
                 border: 1px solid #ddd;
                 color: #fff;
                 transition: .5s;
-                &:hover{
-                    cursor: pointer;
-                    background-color: #fff;
-                    color: $light-red;
-                }
+               &:hover{
+                   cursor: pointer;
+                   color:$light-red;
+                   background-color: #fff;
+               }
             }
         }
        
+    }
+}
+
+@media screen and(min-width:1025px){
+    .nav-header-wrapper{
+        position: relative;
+        background-image: url(../../assets/images/bg-pattern-intro-desktop.svg);
+
+        .hamburger-icon,.close-icon{
+            display: none;
+        }
+        .logo{
+            padding-left: 5rem;
+        }
+        .navigation{
+            position: absolute;
+            top: 2vh;
+            left: 25vw;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: transparent;
+         
+            ul{
+                display: flex;
+                li{
+                    a{
+                        margin: 10px;
+                        color: #fff;
+                        &:hover{
+                            border-bottom: 1px solid #fff;
+                        }
+                    }
+                }
+                .nav-btn{
+                    margin-left: 30vw;
+                    display: flex;
+                    .btn.login {
+                        margin: 10px 15px;
+                        padding: 0;
+                        color: #fff;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                     }
+                     .btn.start.nav{
+                        &:hover{
+                        color: $light-red;
+                        background: #fff;
+                        }
+                    }
+                }
+                }
+                hr{
+                display: none;
+                } 
+        }
+    }
+}
+
+@media screen and(min-width:1600px){
+    .nav-header-wrapper{
+        .logo{
+            padding-left: 10rem;
+        }
     }
 }

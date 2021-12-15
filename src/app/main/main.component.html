@@ -1,10 +1,12 @@
 <div class="main-wrapper">
   <section class="design">
-    <h3 class="title">
+    <h1 class="main-title">
       {{mainTitle}}
-    </h3>
-    <img class="editor-img" src="../../assets/images/illustration-editor-mobile.svg" alt="">
-    <div *ngFor="let content of designSectionContent" class="content">
+    </h1>
+    <img class="editor-img" src="../../assets/images/illustration-editor-mobile.svg" alt="editor">
+    <img class="editor-img-desktop grid-span-row-2" src="../../assets/images/illustration-editor-desktop.svg"
+      alt="editor">
+    <div *ngFor="let content of designSectionContent" class="content" #two>
       <h3 class="title">
         {{content.title}}
       </h3>
@@ -15,15 +17,19 @@
   </section>
   <section class="state">
     <img class="phones-img" src="../../assets/images/illustration-phones.svg" alt="phones">
-    <h2 class="title">
-      {{stateTitle}}
-    </h2>
-    <p class="text">
-      {{stateText}}
-    </p>
+    <div class="content">
+      <h2 class="title">
+        {{stateTitle}}
+      </h2>
+      <p class="text">
+        {{stateText}}
+      </p>
+    </div>
   </section>
   <section class="open-source">
     <img class="laptop-img" src="../../assets/images/illustration-laptop-mobile.svg" alt="laptop">
+    <img class="laptop-img-desktop grid-span-row-2" src="../../assets/images/illustration-laptop-desktop.svg"
+      alt="laptop">
     <div *ngFor="let content of openSectionContent" class="content">
       <h3 class="title">
         {{content.title}}
