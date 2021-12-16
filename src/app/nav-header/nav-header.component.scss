@@ -26,6 +26,8 @@
     }
     .navigation{
         padding: 20px;
+        position: fixed;
+        width: 90%;
         border-radius: 8px;
         text-align: center;
         display: none;
@@ -34,24 +36,6 @@
             li{
                 a{
                     color: $state-sect-bgc;
-                }
-                .dropdown-menu{
-                    display: none;
-                    margin: 0 auto;
-                    padding: 20px;
-                    width: 90%;
-                    border-radius: 6px;
-                    background-color: rgb(235, 235, 235);
-                }
-                .dropdown-menu.active{
-                    display: block;
-                }
-            }
-           
-            .arrow-down{
-                margin-left: 5px;
-                &:hover{
-                    cursor: pointer;
                 }
             }
             hr{
@@ -111,28 +95,33 @@
 
 @media screen and(min-width:1025px){
     .nav-header-wrapper{
-        position: relative;
+        display: grid;
+        grid-template-columns:auto 1fr 1fr;
+        grid-template-areas: 
+        "logo navigation navigation"
+        "header header header";
         background-image: url(../../assets/images/bg-pattern-intro-desktop.svg);
 
         .hamburger-icon,.close-icon{
             display: none;
         }
         .logo{
-            padding-left: 5rem;
+            margin: 0 5rem;
+            grid-area: logo;
         }
         .navigation{
-            position: absolute;
-            top: 2vh;
-            left: 25vw;
+            padding: 0;
+            position: relative;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-start;
             background-color: transparent;
+            grid-area: navigation;
          
             ul{
                 display: flex;
                 li{
                     a{
-                        margin: 10px;
+                        margin:2em;
                         color: #fff;
                         &:hover{
                             border-bottom: 1px solid #fff;
@@ -140,7 +129,8 @@
                     }
                 }
                 .nav-btn{
-                    margin-left: 30vw;
+                    align-items: center;
+                    margin-left: 10em;
                     display: flex;
                     .btn.login {
                         margin: 10px 15px;
@@ -151,6 +141,9 @@
                         }
                      }
                      .btn.start.nav{
+                         width: 100px;
+                         height: 50px;
+                        // padding: 1em;
                         &:hover{
                         color: $light-red;
                         background: #fff;
@@ -163,12 +156,43 @@
                 } 
         }
     }
+    .header{
+        grid-area: header;
+    }
 }
-
+@media screen and(min-width:1201px){
+    .nav-header-wrapper{
+        .navigation{
+            ul{
+                .nav-btn{
+                    margin-left: 20em;
+                }
+            }
+        }
+    }
+}
 @media screen and(min-width:1600px){
     .nav-header-wrapper{
         .logo{
-            padding-left: 10rem;
+            margin-left: 10rem;
+        }
+        .navigation{
+            ul{
+                .nav-btn{
+                    margin-left: 30em;
+                }
+            }
+        }
+    }
+}
+@media screen and(min-width:1900px){
+    .nav-header-wrapper{
+        .navigation{
+            ul{
+                .nav-btn{
+                    margin-left: 40em;
+                }
+            }
         }
     }
 }
